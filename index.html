@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>2026 교원 디지털 역량 강화 연수 안내 웹페이지</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+
+            font-family: 'Noto Sans KR', sans-serif;
+
+            background-color: #f4f6f9;
+
+            color: #334155;
+
+            line-height: 1.6;
+
+            padding: 20px;
+
+        }
+
+        .wrapper {
+
+            max-width: 768px;
+
+            margin: 0 auto;
+
+            background: #ffffff;
+
+            border-radius: 16px;
+
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+            overflow: hidden;
+
+        }
+
+        .header {
+
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+
+            color: #ffffff;
+
+            padding: 35px 25px;
+
+            text-align: center;
+
+            border-bottom: 4px solid #deff9a;
+
+        }
+
+        .header p {
+
+            color: #deff9a;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 8px;
+
+            text-transform: uppercase;
+
+        }
+
+        .header h1 {
+
+            font-size: 26px;
+
+            font-weight: 700;
+
+            line-height: 1.3;
+
+        }
+
+        .content {
+
+            padding: 25px;
+
+        }
+
+        .section-title {
+
+            font-size: 18px;
+
+            font-weight: 700;
+
+            color: #0f172a;
+
+            margin-bottom: 15px;
+
+            padding-left: 8px;
+
+            border-left: 4px solid #1e293b;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+        }
+
+        .info-grid {
+
+            background: #f8fafc;
+
+            border-radius: 12px;
+
+            padding: 20px;
+
+            margin-bottom: 30px;
+
+            border: 1px solid #e2e8f0;
+
+        }
+
+        .info-item {
+
+            display: flex;
+
+            margin-bottom: 12px;
+
+            font-size: 15px;
+
+        }
+
+        .info-item:last-child { margin-bottom: 0; }
+
+        .info-label {
+
+            font-weight: 700;
+
+            color: #64748b;
+
+            width: 80px;
+
+            flex-shrink: 0;
+
+        }
+
+        .info-value {
+
+            color: #1e293b;
+
+            font-weight: 500;
+
+        }
+
+        .place-card {
+
+            background: #ffffff;
+
+            border: 1px solid #e2e8f0;
+
+            border-radius: 12px;
+
+            padding: 20px;
+
+            margin-bottom: 20px;
+
+            transition: transform 0.2s, box-shadow 0.2s;
+
+            overflow: hidden;
+
+        }
+
+        .place-card:hover {
+
+            transform: translateY(-2px);
+
+            box-shadow: 0 6px 12px rgba(0,0,0,0.04);
+
+        }
+
+        .place-header {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: flex-start;
+
+            margin-bottom: 10px;
+
+        }
+
+        .place-name {
+
+            font-size: 16px;
+
+            font-weight: 700;
+
+            color: #0f172a;
+
+        }
+
+        .place-tag {
+
+            font-size: 12px;
+
+            padding: 3px 8px;
+
+            background: #f1f5f9;
+
+            color: #64748b;
+
+            border-radius: 4px;
+
+            font-weight: 500;
+
+        }
+
+        .place-time {
+
+            font-size: 14px;
+
+            color: #64748b;
+
+            margin-bottom: 12px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 5px;
+
+        }
+
+        .place-img {
+
+            width: 100%;
+
+            height: auto;
+
+            max-height: 380px;
+
+            object-fit: cover;
+
+            border-radius: 8px;
+
+            margin-bottom: 15px;
+
+            background-color: #f1f5f9;
+
+        }
+
+        .place-desc {
+
+            font-size: 14px;
+
+            color: #475569;
+
+            margin-bottom: 15px;
+
+        }
+
+        .link-btn {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 6px;
+
+            background-color: #4f46e5;
+
+            color: #ffffff;
+
+            text-decoration: none;
+
+            padding: 8px 16px;
+
+            border-radius: 6px;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            transition: background 0.2s;
+
+        }
+
+        .link-btn:hover {
+
+            background-color: #4338ca;
+
+        }
+
+        .link-btn.map {
+
+            background-color: #03c75a;
+
+        }
+
+        .link-btn.map:hover {
+
+            background-color: #02b14f;
+
+        }
+
+        .notice-box {
+
+            background-color: #fffbeb;
+
+            border: 1px solid #fef3c7;
+
+            border-radius: 12px;
+
+            padding: 20px;
+
+            margin-top: 25px;
+
+            text-align: center;
+
+        }
+
+        .notice-box i {
+
+            font-size: 24px;
+
+            color: #d97706;
+
+            margin-bottom: 8px;
+
+        }
+
+        .notice-text {
+
+            font-size: 15px;
+
+            font-weight: 700;
+
+            color: #92400e;
+
+        }
+
+        .footer {
+
+            text-align: center;
+
+            padding: 25px;
+
+            font-size: 13px;
+
+            color: #94a3b8;
+
+            background: #f8fafc;
+
+            border-top: 1px solid #e2e8f0;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+<div class="wrapper">
+
+    <div class="header">
+
+        <p>2026 Academic Year</p>
+
+        <h1>디지털 역량 강화 교원 연수 안내</h1>
+
+    </div>
+
+
+
+    <div class="content">
+
+        <div class="section-title"><i class="fa-solid fa-circle-info"></i> 연수 개요</div>
+
+        <div class="info-grid">
+
+            <div class="info-item">
+
+                <div class="info-label">일시</div>
+
+                <div class="info-value">2026. 7. 21.(화) 11:30 ~ 7. 22.(수) 14:00 (1박 2일)</div>
+
+            </div>
+
+            <div class="info-item">
+
+                <div class="info-label">장소</div>
+
+                <div class="info-value">경기도 양평군 일대 및 서울로봇인공지능과학관</div>
+
+            </div>
+
+            <div class="info-item">
+
+                <div class="info-label">대상</div>
+
+                <div class="info-value">연수 참가 신청 완료 교원 26명(신청 접수 마감)</div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="section-title"><i class="fa-solid fa-map-location-dot"></i> 주요 방문지 안내</div>
+
+
+
+        <div class="place-card">
+
+            <div class="place-header">
+
+                <div class="place-name">팔당초계국수 본점</div>
+
+                <div class="place-tag">1일차 오찬</div>
+
+            </div>
+
+            <div class="place-time"><i class="fa-regular fa-clock"></i> 13:00 ~ 14:00</div>
+
+            <img src="https://postfiles.pstatic.net/MjAyNjA3MDZfMTYz/MDAxNzgzMzM3MDEzMzI4.86NFPYHX0hxFoa1gfYP1bSHSmMx8W19PBzuMCfgFFkcg.uSk7v1wCfXgkVUFkIgvg0bSf05NhzLKwoq4Vp_duevkg.JPEG/image_d0cefe.jpg.jpg?type=w3840" alt="팔당초계국수 본점" class="place-img">
+
+            <div class="place-desc">연수의 시작을 알리는 시원하고 깔끔한 보양식 초계국수 오찬입니다.</div>
+
+            <a href="https://naver.me/FCZJc2Zj" class="link-btn map" target="_blank">
+
+                <i class="fa-solid fa-location-dot"></i> 네이버 지도 확인
+
+            </a>
+
+        </div>
+
+
+
+        <div class="place-card">
+
+            <div class="place-header">
+
+                <div class="place-name">더 마구 (THE MAGU)</div>
+
+                <div class="place-tag">1일차 문화/예술</div>
+
+            </div>
+
+            <div class="place-time"><i class="fa-regular fa-clock"></i> 14:30 ~ 17:30</div>
+
+            <img src="https://postfiles.pstatic.net/MjAyNjA3MDZfMTE0/MDAxNzgzMzM3MDEzMzI1.2U7Yg2SXT0Rdi5b5NDxIRxE9-Lj4WFmsc2jdJ9FSvDwg.BL23fhACo-yDHxSOdekPs6pd_6kDHI0Z3O-YbmoS0Hwg.JPEG/image_d0d643.jpg.jpg?type=w3840" alt="더 마구" class="place-img">
+
+            <div class="place-desc">빛과 바람이 스미는 건축 공간에서의 성악 공연, 전시 관람 및 피오렐라 카페 음료가 제공됩니다.</div>
+
+            <a href="https://www.themagu.com/" class="link-btn" target="_blank">
+
+                <i class="fa-solid fa-globe"></i> 공식 홈페이지 방문
+
+            </a>
+
+        </div>
+
+
+
+        <div class="place-card">
+
+            <div class="place-header">
+
+                <div class="place-name">한강민물장어</div>
+
+                <div class="place-tag">1일차 만찬</div>
+
+            </div>
+
+            <div class="place-time"><i class="fa-regular fa-clock"></i> 17:50 ~ 20:00</div>
+
+            <img src="https://postfiles.pstatic.net/MjAyNjA3MDZfMjk3/MDAxNzgzMzM3MDEzMjk3.NveKURPDiErFzFJyJN60dvdcdQB4jMZVfHxoJ2hYU0og.uxd_wEHOikZ3tyGHt7deowTkNUebfyCFQB5ql02qhu4g.JPEG/image_d0d319.jpg.jpg?type=w3840" alt="한강민물장어 진짜 맛있네" class="place-img">
+
+            <div class="place-desc">양수리 명소에서 즐기는 국내산 민물장어 구이로 건강한 저녁 만찬을 보냅니다.</div>
+
+            <a href="https://naver.me/xNpQzFag" class="link-btn map" target="_blank">
+
+                <i class="fa-solid fa-location-dot"></i> 네이버 지도 확인
+
+            </a>
+
+        </div>
+
+
+
+        <div class="place-card">
+
+            <div class="place-header">
+
+                <div class="place-name">프라이빗 가든 몬스마리</div>
+
+                <div class="place-tag">1일차 숙소</div>
+
+            </div>
+
+            <div class="place-time"><i class="fa-regular fa-clock"></i> 20:20 ~ 체크인</div>
+
+            <img src="https://postfiles.pstatic.net/MjAyNjA3MDZfMjky/MDAxNzgzMzM3MDEzMzMy.ecuCuXGmVBkCF_z522t0W71xUYXUSIJPB3axXs6Caqwg.8TruJJzQeSespk-2GOJ4nFxRbJRZwYwBpjgxFgfNbFQg.JPEG/image_d0d285.jpg.jpg?type=w3840" alt="프라이빗 가든 몬스마리" class="place-img">
+
+            <div class="place-desc">프라이빗 정원에서 편안한 휴식과 친목 도모, 자유시간을 제공합니다.</div>
+
+            <a href="https://naver.me/G8fGqKn2" class="link-btn" target="_blank">
+
+                <i class="fa-solid fa-hotel"></i> 숙소 상세 정보 확인
+
+            </a>
+
+        </div>
+
+
+
+        <div class="place-card">
+
+            <div class="place-header">
+
+                <div class="place-name">서울로봇인공지능과학관 (RAIM)</div>
+
+                <div class="place-tag">2일차 첨단 견학</div>
+
+            </div>
+
+            <div class="place-time"><i class="fa-regular fa-clock"></i> 11:00 ~ 12:00</div>
+
+            <img src="https://postfiles.pstatic.net/MjAyNjA3MDZfMjA2/MDAxNzgzMzM3MDEzMzMy.9G8AKuEJ6lbXvw1-cMEYKbG7coZEGqFqZJDrc_EGOawg.do1RHGu3UfwydrJ8juVP3SVUdIhuJ8YjEuTkZlkd0qgg.JPEG/image_d0d6fb.jpg.jpg?type=w3840" alt="서울로봇인공지능과학관" class="place-img">
+
+            <div class="place-desc">잘 놀았으니 숙제하러 가시죠! 디지털 역량 강화를 위해 최첨단 로봇 및 AI 트렌드를 직접 경험하는 핵심 현장 견학 코스입니다.</div>
+
+            <a href="https://science.seoul.go.kr/RAIM" class="link-btn" target="_blank">
+
+                <i class="fa-solid fa-microchip"></i> 공식 홈페이지 방문
+
+            </a>
+
+        </div>
+
+
+
+        <div class="notice-box">
+
+            <i class="fa-solid fa-laptop-code"></i>
+
+            <div class="notice-text">추천 준비물: 숙소용 슬리퍼, 개인 골프채(스크린 골프 이용하실 분)</div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="footer">
+
+        2026 DIGITAL COMPETENCY WORKSHOP FOR TEACHERS
+
+    </div>
+
+</div>
+
+
+
+</body>
+
+</html>
